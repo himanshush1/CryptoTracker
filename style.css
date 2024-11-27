@@ -1,0 +1,231 @@
+:root {
+    /* Light Theme Colors */
+    --primary-light: #3498db;
+    --secondary-light: #f8f9fa;
+    --text-light: #333;
+    --background-light: #ffffff;
+    --card-light: #f1f3f5;
+    --border-light: #e0e0e0;
+
+    /* Dark Theme Colors */
+    --primary-dark: #2980b9;
+    --secondary-dark: #212529;
+    --text-dark: #f4f4f4;
+    --background-dark: #121212;
+    --card-dark: #1e1e1e;
+    --border-dark: #333;
+}
+
+/* Default Light Theme */
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Theme-specific element styling */
+.light-theme {
+    /* Light theme specific styles */
+    background-color: var(--secondary-light);
+}
+
+.dark-theme {
+    /* Dark theme specific styles */
+    background-color: var(--secondary-dark);
+}
+
+/* Header Theming */
+.light-theme .header {
+    background-color: var(--primary-light) !important;
+    color: white;
+}
+
+.dark-theme .header {
+    background-color: var(--primary-dark) !important;
+    color: white;
+}
+
+/* Table Theming */
+.light-theme .table {
+    color: var(--text-light);
+}
+
+.dark-theme .table {
+    color: var(--text-dark);
+}
+
+.dark-theme .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    z-index: 1000;
+}
+
+#theme-switch {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+}
+
+.light-theme #theme-switch {
+    color: var(--text-light);
+}
+
+.dark-theme #theme-switch {
+    color: var(--text-dark);
+}
+
+/* Modal Theming */
+.dark-theme .modal-content {
+    background-color: var(--card-dark);
+    color: var(--text-dark);
+}
+
+.light-theme .modal-content {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+/* Sidebar Theming */
+.light-theme .sidebar {
+    background-color: var(--card-light);
+    border-right: 1px solid var(--border-light);
+}
+
+.dark-theme .sidebar {
+    background-color: var(--card-dark);
+    border-right: 1px solid var(--border-dark);
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: var(--primary-bg-light);
+    color: var(--text-color-light);
+}
+
+body.light-theme .table {
+    background-color: var(--secondary-bg-light);
+}
+
+body.light-theme .sidebar {
+    background-color: #f8f9fa;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: var(--primary-bg-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-theme .table {
+    background-color: var(--secondary-bg-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-theme .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+body.dark-theme .sidebar {
+    background-color: #2c2c2c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .table-responsive {
+        font-size: 0.8rem;
+    }
+}
+
+/* Utility Classes */
+.positive-change {
+    color: green;
+}
+
+.negative-change {
+    color: red;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+/* Crypto Table */
+#crypto-table th {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Chart Styling */
+#price-chart {
+    max-height: 400px;
+}
+
+/* Favorites Star */
+.favorite-star {
+    cursor: pointer;
+    color: gray;
+}
+
+.favorite-star.active {
+    color: gold;
+}
+/* Theme Toggle Button Styles */
+.theme-toggle {
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#theme-switch {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Rounded button */
+    padding: 10px 15px; /* Padding for a better size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+#theme-switch:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+#theme-switch:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Custom focus ring */
+}
+
+/* Icon Styles */
+#theme-icon {
+    font-size: 1.2rem; /* Icon size */
+}
+
+/* Dark Theme Button Styles */
+.dark-theme #theme-switch {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+}
+
+.dark-theme #theme-switch:hover {
+    background-color: #495057; /* Darker shade on hover */
+}
